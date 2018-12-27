@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="50dp"
+    android:background="@drawable/edtbg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/headerBG_clr"
+        android:gravity="center">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/txt_otp_Hed"
+            style="@style/style_Hdr_Txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="OTP Verification"
+            android:textSize="20dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.AppCompatTextView
+            style="@style/style_TxtHedForm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="36sp"
+            android:text="Verification Code" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/txt_otp"
+            style="@style/style_TxtHedForm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:maxLines="3"
+            android:text="Please type the verification code sent to +91XXXXXXXXXX" />
+
+        <!--<android.support.design.widget.TextInputLayout
+            style="@style/style_InputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/edt_Txt_OTP"
+                style="@style/style_EditText"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edtTxt_Ht"
+                android:hint="Enter OTP"
+                android:inputType="number" />
+        </android.support.design.widget.TextInputLayout>-->
+
+
+        <com.mukesh.OtpView
+            android:id="@+id/otp_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:inputType="number"
+            android:itemBackground="@color/colorOtpView"
+            android:cursorVisible="true"
+            android:textColor="@android:color/black"
+            app:itemCount="4"
+            android:layout_gravity="center"
+            app:lineColor="@color/colorOtpView"
+            app:viewType="line" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/txt_ElpsdTime"
+            style="@style/style_Lg_FgtReg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:text="00:00"
+            android:textColor="#fa1b1b"
+            android:textStyle="bold" />
+
+        <android.support.v7.widget.AppCompatImageButton
+            android:id="@+id/imgBt_OTPSubmit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="20dp"
+            android:background="@drawable/submit"
+            />
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,196 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppBaseTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowSoftInputMode">adjustResize|stateAlwaysHidden</item>
+        <item name="otpViewStyle">@style/OtpWidget.OtpView</item>
+
+    </style>
+
+
+    <style name="style_Hdr_Txt" style="@style/Widget.AppCompat.TextView">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/bg_clr</item>
+        <item name="android:textSize">@dimen/header_Txt_font</item>
+        <item name="android:padding">2dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+
+    <!-- Registration Page Styles Stars-->
+    <style name="style_InputLayout" parent="Base.TextAppearance.AppCompat">
+        <item name="android:textStyle">bold</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textSize">@dimen/edtTxtLyt_font</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">@color/log_txtClr</item>
+        <item name="android:textColorHint">@color/log_txtClr</item>
+        <item name="android:textCursorDrawable">@null</item>
+    </style>
+
+    <style name="style_EditText" parent="Widget.AppCompat.EditText">
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:inputType">textCapCharacters</item>
+        <item name="android:textSize">@dimen/edittext_font</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">@color/headerBG_clr</item>
+        <item name="android:textColorHint">#d6d5d5</item>
+        <item name="android:textCursorDrawable">@null</item>
+        <item name="colorAccent">@color/black</item>
+        <item name="colorControlNormal">@color/black</item>
+        <item name="colorControlActivated">@color/black</item>
+    </style>
+
+    <style name="style_TextView" style="@style/Widget.AppCompat.TextView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:textColor">#03044b</item>
+        <item name="android:textSize">@dimen/edtTxtLyt_font</item>
+        <item name="android:padding">2dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+    <!-- Registration Page Styles Ends-->
+
+    <!-- Login Page Styles Starts-->
+    <style name="style_LgHeder" style="@style/Widget.AppCompat.TextView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:textColor">#2a2a2b</item>
+        <item name="android:textSize">@dimen/log_TxtFont</item>
+        <item name="android:padding">2dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+
+    <style name="style_Lg_FgtReg" style="@style/Widget.AppCompat.TextView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:textColor">@color/log_txtClr</item>
+        <item name="android:textSize">@dimen/log_FRegFont</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:padding">2dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+
+    <!-- Login Page Styles Ends-->
+
+
+    <!--Dashboard Page Styles Starts-->
+
+    <style name="style_Modules_Lyt">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:padding">2dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">#dad8d8</item>
+
+    </style>
+
+
+    <!--Dashboard Page Styles Ends-->
+
+    <style name="spinner_style">
+        <item name="android:background">@drawable/spinner_style</item>
+        <item name="android:textColor">@color/headerBG_clr</item>
+        <item name="android:gravity">start</item>
+    </style>
+
+
+    <style name="style_CardView" parent="Theme.AppCompat.Light">
+        <item name="android:padding">5dp</item>
+        <item name="contentPaddingBottom">2dp</item>
+        <item name="contentPaddingTop">2dp</item>
+        <item name="contentPaddingLeft">5dp</item>
+        <item name="contentPaddingRight">5dp</item>
+        <item name="android:layout_margin">3dp</item>
+        <item name="android:shadowColor">@color/bg_clr</item>
+    </style>
+
+    <style name="style_CardViewToggle" parent="Theme.AppCompat.Light">
+        <item name="android:padding">5dp</item>
+        <item name="android:shadowColor">@color/bg_clr</item>
+    </style>
+    <style name="style_rbtxt" style="@style/Widget.AppCompat.TextView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:textColor">@color/txt_rbtnClr</item>
+        <item name="android:textSize">@dimen/txtfont_rbtn</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:padding">2dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+
+    <style name="style_TxtHedForm" style="@style/Widget.AppCompat.TextView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:textColor">#03044b</item>
+        <item name="android:textSize">@dimen/txt_Form_Font</item>
+        <item name="android:padding">2dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+
+    <style name="style_TxtPrintData" style="@style/Widget.AppCompat.TextView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:textColor">#03044b</item>
+        <item name="android:textSize">@dimen/txt_Form_Font</item>
+        <item name="android:padding">2dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+
+    <style name="style_TxtInfoForm" style="@style/Widget.AppCompat.TextView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:textColor">#03044b</item>
+        <item name="android:textSize">@dimen/txt_Form_Font</item>
+        <item name="android:padding">2dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+
+
+    <style name="SwitchCompatStyle" >
+        <item name="android:thumb">@drawable/switch_thumb</item>
+        <item name="trackTint">@drawable/switch_color</item>
+    </style>
+
+    <style name="AppThemeOTP" parent="AppTheme">
+        <!-- Customize your theme here. -->
+        <item name="otpViewStyle">@style/OtpWidget.OtpView</item>
+    </style>
+
+</resources>

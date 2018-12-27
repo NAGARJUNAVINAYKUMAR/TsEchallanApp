@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_clr"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/lyt_LogHed"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/loginBg_Ht"
+                android:background="@drawable/loginbg"
+                android:gravity="center">
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:layout_width="@dimen/loginLogo_Ht"
+                    android:layout_height="@dimen/loginLogo_Ht"
+                    android:layout_marginTop="@dimen/log_MrTop"
+                    android:background="@drawable/logo_hyd"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/lyt_LgNV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lyt_LogHed"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.AppCompatTextView
+                    style="@style/style_LgHeder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/login_AppName" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    style="@style/style_LgHeder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="100dp"
+                    android:text="@string/login_version"
+                    android:textColor="#4D61A6"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/log_Mr"
+                android:orientation="vertical">
+
+                <android.support.design.widget.TextInputLayout
+                    style="@style/style_InputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/inpt_lytHt">
+
+                    <android.support.v7.widget.AppCompatEditText
+                        android:id="@+id/edtTxt_User_PID"
+                        style="@style/style_EditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/log_et_Ht"
+                        android:hint="@string/login_User_Pid"
+                        android:inputType="text" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    style="@style/style_InputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/inpt_lytHt"
+                    android:layout_marginTop="10dp">
+
+                    <android.support.v7.widget.AppCompatEditText
+                        android:id="@+id/edtTxt_User_Pwd"
+                        style="@style/style_EditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/log_et_Ht"
+                        android:hint="@string/login_pwd"
+                        android:inputType="textPassword" />
+                </android.support.design.widget.TextInputLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/txt_FrtPwd"
+                        style="@style/style_Lg_FgtReg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:text="@string/login_Txt_Frt" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/txt_register"
+                        style="@style/style_Lg_FgtReg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:text="@string/login_Txt_Reg"
+                        tools:ignore="RelativeOverlap" />
+                </RelativeLayout>
+
+
+                <android.support.v7.widget.AppCompatImageButton
+                    android:id="@+id/imgBt_Login"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="30dp"
+                    android:background="@drawable/submit" />
+
+            </LinearLayout>
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/btn_Cadre"
+                android:layout_width="150dp"
+                android:layout_height="80dp"
+                android:layout_gravity="end"
+                android:text="Cadre" />
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

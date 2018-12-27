@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <dimen name="edtTxtLyt_font">20dp</dimen>
+    <dimen name="edittext_font">20sp</dimen>
+    <dimen name="edtTxt_Ht">60dp</dimen>
+    <dimen name="spner_Ht">60dp</dimen>
+    <dimen name="btn_Ht">60dp</dimen>
+
+    <!--DashBoard-->
+    <dimen name="cardView_font">150dp</dimen>
+</resources>

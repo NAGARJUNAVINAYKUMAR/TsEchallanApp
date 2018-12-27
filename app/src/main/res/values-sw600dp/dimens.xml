@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="edtTxtLyt_font">20sp</dimen>
+    <dimen name="edittext_font">22sp</dimen>
+    <dimen name="edtTxt_Ht">45dp</dimen>
+    <dimen name="spner_Ht">50dp</dimen>
+    <dimen name="btn_Ht">50dp</dimen>
+    <dimen name="btn_wdt">250dp</dimen>
+    <dimen name="inpt_lytHt">50dp</dimen>
+    <dimen name="inpt_lytAddresHt">100dp</dimen>
+    <dimen name="spinner_Ht">50dp</dimen>
+    <dimen name="spinnerarw_Ht">12dp</dimen>
+    <dimen name="spinnerarw_Wdt">24dp</dimen>
+    <dimen name="txtfont_rbtn">20sp</dimen>
+    <dimen name="txt_Form_Font">16sp</dimen>
+    <dimen name="txt_VltnFont">20sp</dimen>
+    <dimen name="txt_VltnLst_Ht">60dp</dimen>
+
+
+    <dimen name="capturedImg_Wt">350dp</dimen>
+    <dimen name="capturedImg_Ht">250dp</dimen>
+
+
+
+    <dimen name="header_Ht">80dp</dimen>
+    <dimen name="header_Txt_font">25dp</dimen>
+
+    <!--Login Page Dimens Starts-->
+
+    <dimen name="loginBg_Ht">400dp</dimen>
+    <dimen name="loginLogo_Ht">150dp</dimen>
+    <dimen name="log_MrTop">40dp</dimen>
+    <dimen name="log_TxtFont">30sp</dimen>
+    <dimen name="log_MrLft">100dp</dimen>
+    <dimen name="log_Mr">30dp</dimen>
+    <dimen name="log_et_Ht">45dp</dimen>
+    <dimen name="log_FRegFont">20sp</dimen>
+
+    <!--Login Page Dimens Ends-->
+
+    <!--DashBoard-->
+    <dimen name="cardView_font">100dp</dimen>
+    <dimen name="m_Icon_size">60dp</dimen>
+
+
+    <!--spot Page Dimens Starts-->
+
+    <dimen name="img_RCLogo_Ht">60dp</dimen>
+    <dimen name="eT_adresHt">80dp</dimen>
+
+
+    <!--spot Page Dimens Ends-->
+
+
+
+
+    <dimen name="font_size_heading">25sp</dimen>
+    <dimen name="font_size_subheading">18sp</dimen>
+    <dimen name="font_size_normal">14sp</dimen>
+
+    <dimen name="recyclerview_margin">10dp</dimen>
+    <dimen name="layout_margin">10dp</dimen>
+    <dimen name="searchview_margin">5dp</dimen>
+    <dimen name="text_button_size">14sp</dimen>
+    <dimen name="textview_margin">10dp</dimen>
+    <dimen name="line_margin">40dp</dimen>
+
+
+
+</resources>

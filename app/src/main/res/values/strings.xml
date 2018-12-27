@@ -1,0 +1,145 @@
+<resources>
+    <string name="app_name">TS-eTicket</string>
+
+    <string name="txt_DateFrmt">YYYY-MM-DD</string>
+
+    <!-- Registration Page Starts-->
+
+    <string name="reg_Heading">User Registration</string>
+    <string name="reg_Emp_ID">Enter Employee Id</string>
+    <string name="reg_User_ID">Enter User Id</string>
+    <string name="reg_Name">Enter Name</string>
+    <string name="reg_PWD">Enter Password</string>
+    <string name="reg_Mobile">Enter Mobile Number</string>
+    <string name="reg_Email">Enter Email Id</string>
+    <string name="reg_Rank">Select Rank</string>
+    <string name="reg_Dist">Select District</string>
+    <string name="reg_PS">Select Police Station</string>
+    <string name="reg_btn_">Register</string>
+    <string name="reg_txt_Login"> Already have an Account ?, please <i><b><u>LOGIN</u></b></i> </string>
+
+    <!-- Registration Page End-->
+
+    <!--Login Page Starts-->
+
+    <string name="login_AppName">TS-eTicket Login</string>
+    <string name="login_version">1.0.0</string>
+    <string name="login_User_Pid">Enter User Id</string>
+    <string name="login_pwd">Enter Password</string>
+    <string name="login_btn">Login</string>
+    <string name="login_Txt_Frt">Forgot Password</string>
+    <string name="login_Txt_Reg">Register</string>
+
+    <!--Login Page Starts-->
+
+
+    <!-- DashBoard page Starts-->
+
+    <string name="m_spotChallan">Spot Challan</string>
+    <string name="m_DDChallan">Drunk&amp;Drive</string>
+    <string name="m_cpact">41 (CP)Act</string>
+    <string name="m_ghmc">GHMC</string>
+    <string name="m_seizure">SEIZURE(39B)</string>
+    <string name="m_court">Court Disposal</string>
+    <string name="m_release_doc">Release Items</string>
+    <string name="m_reports">Reports</string>
+    <string name="m_settings">Settings</string>
+
+    <!-- DashBoard page Ends-->
+
+    <!-- Settings page Starts-->
+    <string name="settings_Hed">Settings</string>
+    <string name="select_PS">Select PS Name</string>
+    <string name="select_Point">Select Point Name</string>
+    <string name="select_Res_PS">Select Responsible PS Name</string>
+    <string name="bluth_Confg_txt">Bluetooth Configuration </string>
+    <string name="txt_scanBT">Scan Bluetooth</string>
+    <string name="txt_BTAdres">Blurtooth Address</string>
+
+    <!-- Settings page Ends-->
+
+    <!-- Spot page Starts-->
+
+    <string name="spot_Hedng">Spot Challan</string>
+    <string name="crane_Hedng">CraneLift(41cp Act)</string>
+    <string name="txt_RegNo">Registration No</string>
+    <string name="txt_TrNo">T/R No</string>
+    <string name="txt_ChasisNo">Chasis No</string>
+    <string name="txt_engNo">Engine No</string>
+    <string name="txt_DLNO">Driving Licence Number</string>
+    <string name="txt_DL_DOB">DL DOB</string>
+    <string name="txt_AadharNo">Aadhaar No</string>
+    <string name="txt_RCHdng">TELANGANA STATE TRANSPORT DEPARTMENT \n CERTIFICATE OF REGISTRATION</string>
+    <string name="txt_DLHdng">INDIAN UNION DRIVING LICENCE \n TELANGANA STATE</string>
+    <string name="txt_OwnerName">Owner Name</string>
+    <string name="txt_addres">Address</string>
+    <string name="txt_VehcleType">Vehicle Type</string>
+    <string name="txt_EngNo">Engine No</string>
+    <string name="txt_RCDetls">RC DETAILS</string>
+    <string name="txt_DLDetls">DL DETAILS</string>
+    <string name="txt_AdarDetls">AADHAAR DETAILS</string>
+    <string name="txt_DRName">Driver Name<font fgcolor="#ed0404">*</font></string>
+    <string name="txt_DRNameCrane">Driver Name</string>
+    <string name="txt_DRFName">Father Name</string>
+    <string name="txt_DRAdres">Address</string>
+    <string name="txt_PendngChalnsNo">No. of Pending Challans</string>
+    <string name="txt_PendgAmnt">Pending Amount</string>
+    <string name="txt_WelerCode">Select Vehicle Type</string>
+    <string name="txt_SlctVltn">Select Violation</string>
+    <string name="txt_PresntVltnAmnt">Present Violation Amount</string>
+    <string name="txt_TotlAmnt">Total Amount</string>
+    <string name="txt_DriverImg">Driver Image</string>
+    <string name="txt_Sltd_Vltn">Selected Violations</string>
+
+
+    <string name="is_it_spot_payment">Is it Spot payment ?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="detained_items">Detained Items</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="send_otp">SEND OTP</string>
+
+
+    <!-- Spot page Ends-->
+
+
+    <string name="drunk_drive">Drunk&amp;Drive</string>
+    <string name="get_details">Get Details</string>
+    <string name="colon">:</string>
+    <string name="_20">20</string>
+    <string name="_2000">2000</string>
+    <string name="cancel">Cancel</string>
+    <string name="submit">Submit</string>
+    <string name="next">Next</string>
+    <string name="age">Age<font fgcolor="#ed0404">*</font></string>
+    <string name="gender">Gender</string>
+    <string name="breath_analyzer">Breath Analyzer :</string>
+    <string name="enter_alcohol_reading">Enter Alcohol Reading</string>
+    <string name="enter_breath_analyzer_serial_no">Enter Breath Analyzer Serial No.</string>
+    <string name="please_type_verification_code">Please type the verification code sent to \n +91</string>
+    <string name="male">MALE</string>
+    <string name="female">FEMALE</string>
+    <string name="other">OTHER</string>
+
+
+    <string name="dialog_done_text">DONE</string>
+    <string name="dialog_cancel_text">Cancel</string>
+    <string name="list_empty">No items to display</string>
+    <string name="select_entry">Select Entries</string>
+    <string name="validation_text">Please select atleast one option</string>
+    <string name="please_select_atleast">Please select atleast </string>
+    <string name="you_can_only_select_upto">You can only select up to </string>
+    <string name="option"> option</string>
+    <string name="options"> options</string>
+    <string name="select_all">select all</string>
+    <string name="de_select_all">deselect all</string>
+    <string name="permit">Permit</string>
+    <string name="none">None</string>
+    <string name="rc">RC</string>
+    <string name="dl">DL</string>
+    <string name="vhcle">Vehicle</string>
+    <string name="challan_receipt">Challan Receipt</string>
+    <string name="user_id">User ID</string>
+
+
+</resources>

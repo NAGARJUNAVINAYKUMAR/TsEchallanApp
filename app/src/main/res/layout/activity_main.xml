@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.tspolice.echallan.activities.MainActivity"
+    android:layout_margin="25dp">
+
+    <android.support.v7.widget.AppCompatEditText
+        android:id="@+id/eT_cadres"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="100dp"
+        android:textSize="25dp"
+        android:text="1,2,3,4,5,6,7,8,9,10,11,12,13"
+        />
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btn_Save"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="save"
+        android:layout_below="@+id/eT_cadres"/>
+
+</RelativeLayout>

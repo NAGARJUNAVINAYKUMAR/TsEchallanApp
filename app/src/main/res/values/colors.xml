@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="list_even">#f9f9f9</color>
+    <color name="list_odd">#d7d7d7</color>
+    <color name="list_selected">#4D61A6</color>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+
+    <color name="headerBG_clr">#4D61A6</color>
+    <color name="bg_clr">#F4F4F4</color>
+    <color name="log_txtClr">#696969</color>
+    <color name="txt_rbtnClr">#4D61A6</color>
+    <color name="colorOtpView">#FFE3E7FD</color>
+</resources>

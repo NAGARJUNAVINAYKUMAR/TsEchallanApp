@@ -1,0 +1,1266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_clr"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/lyt_hdr"
+        layout="@layout/header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/header_Ht">
+
+    </include>
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/txt_hdngSpot"
+        style="@style/style_LgHeder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lyt_hdr"
+        android:gravity="center"
+        android:text="@string/crane_Hedng" />
+
+    <ScrollView
+        android:id="@+id/srolView_Spot"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/txt_hdngSpot"
+        android:layout_margin="10dp"
+        android:fillViewport="true"
+        android:fitsSystemWindows="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioGroup
+                android:id="@+id/radio_GrpSpot"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edtTxt_Ht"
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="4">
+
+                <RadioButton
+                    android:id="@+id/rBtn_RegNo"
+                    style="@style/style_rbtxt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1.25"
+                    android:checked="true"
+                    android:text="@string/txt_RegNo" />
+
+                <RadioButton
+                    android:id="@+id/rBtn_TRNo"
+                    style="@style/style_rbtxt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.75"
+                    android:text="@string/txt_TrNo" />
+
+                <RadioButton
+                    android:id="@+id/rBtn_ChasNo"
+                    style="@style/style_rbtxt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="@string/txt_ChasisNo" />
+
+                <RadioButton
+                    android:id="@+id/rBtn_EngNo"
+                    style="@style/style_rbtxt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="@string/txt_engNo" />
+
+            </RadioGroup>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/inpt_lytHt"
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/txt_Reg_Chas"
+                    style="@style/style_TextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="@string/txt_RegNo" />
+
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/edt_Txt_RegChasEngNo"
+                    style="@style/style_EditText"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/inpt_lytHt"
+                    android:layout_weight="2"
+                    android:inputType="textCapCharacters" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/inpt_lytHt"
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <android.support.v7.widget.AppCompatTextView
+                    style="@style/style_TextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/txt_DLNO" />
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/edt_Txt_DLNo"
+                    style="@style/style_EditText"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/inpt_lytHt"
+                    android:layout_weight="2"
+                    android:inputType="textCapCharacters" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lyt_DL_DOB"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/inpt_lytHt"
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:weightSum="3">
+
+                <android.support.v7.widget.AppCompatTextView
+                    style="@style/style_TextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/txt_DL_DOB" />
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/edt_Txt_DLDOB"
+                    style="@style/style_EditText"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/inpt_lytHt"
+                    android:layout_weight="1.60"
+                    android:hint="@string/txt_DateFrmt"
+                    android:inputType="date" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/img_DLDOB"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/inpt_lytHt"
+                    android:layout_weight="0.40"
+                    android:src="@drawable/calender"
+                    tools:ignore="ContentDescription" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/inpt_lytHt"
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:weightSum="3">
+
+                <android.support.v7.widget.AppCompatTextView
+                    style="@style/style_TextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/txt_AadharNo" />
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/edt_Txt_AadharNo"
+                    style="@style/style_EditText"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/inpt_lytHt"
+                    android:layout_weight="2"
+                    android:inputType="number" />
+
+            </LinearLayout>
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/btn_GetDetails"
+                android:layout_width="@dimen/btn_wdt"
+                android:layout_height="@dimen/btn_Ht"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:background="@drawable/btnbg"
+                android:text="Get details"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/lyt_GetInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!--Vehicle  RCCard Details Stat-->
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/txt_RCDtlsFnd"
+                    style="@style/style_TextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/txt_RCDetls"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/lyt_RCCardInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        style="@style/style_CardView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        card_view:cardCornerRadius="15dp"
+                        card_view:elevation="15dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <android.support.v7.widget.AppCompatImageView
+                                    android:layout_width="@dimen/img_RCLogo_Ht"
+                                    android:layout_height="@dimen/img_RCLogo_Ht"
+                                    android:src="@drawable/emblem" />
+
+                                <android.support.v7.widget.AppCompatButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/img_RCLogo_Ht"
+                                    android:layout_marginStart="5dp"
+                                    android:background="@drawable/rclytbg"
+                                    android:text="@string/txt_RCHdng"
+                                    android:textColor="@color/white"
+                                    android:textStyle="bold" />
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:weightSum="1">
+
+                                    <android.support.v7.widget.AppCompatTextView
+                                        style="@style/style_TxtHedForm"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="0.30"
+                                        android:text="@string/txt_RegNo" />
+
+                                    <android.support.v7.widget.AppCompatTextView
+                                        style="@style/style_TxtHedForm"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="0.05"
+                                        android:text=":" />
+
+                                    <android.support.v7.widget.AppCompatTextView
+                                        android:id="@+id/txt_RCRegChasEngNo"
+                                        style="@style/style_TxtInfoForm"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="0.65"
+                                        android:textColor="#de0303"
+                                        android:textStyle="bold" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:weightSum="1">
+
+                                    <android.support.v7.widget.AppCompatTextView
+                                        style="@style/style_TxtHedForm"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="0.30"
+                                        android:text="@string/txt_OwnerName" />
+
+                                    <android.support.v7.widget.AppCompatTextView
+                                        style="@style/style_TxtHedForm"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="0.05"
+                                        android:text=":" />
+
+                                    <android.support.v7.widget.AppCompatTextView
+                                        android:id="@+id/txt_RCOwnrName"
+                                        style="@style/style_TxtInfoForm"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="0.65" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:weightSum="1">
+
+                                    <android.support.v7.widget.AppCompatTextView
+                                        style="@style/style_TxtHedForm"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="0.30"
+                                        android:text="@string/txt_addres" />
+
+                                    <android.support.v7.widget.AppCompatTextView
+                                        style="@style/style_TxtHedForm"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="0.05"
+                                        android:text=":" />
+
+                                    <android.support.v7.widget.AppCompatTextView
+                                        android:id="@+id/txt_RcAddress"
+                                        style="@style/style_TxtInfoForm"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="0.65"
+                                        android:inputType="textMultiLine"
+                                        android:maxLines="4" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:weightSum="1">
+
+                                    <android.support.v7.widget.AppCompatTextView
+                                        style="@style/style_TxtHedForm"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="0.30"
+                                        android:text="@string/txt_VehcleType" />
+
+                                    <android.support.v7.widget.AppCompatTextView
+                                        style="@style/style_TxtHedForm"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="0.05"
+                                        android:text=":" />
+
+                                    <android.support.v7.widget.AppCompatTextView
+                                        android:id="@+id/txt_VehcileType"
+                                        style="@style/style_TxtInfoForm"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="0.65" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:weightSum="1">
+
+                                    <android.support.v7.widget.AppCompatTextView
+                                        style="@style/style_TxtHedForm"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="0.30"
+                                        android:text="@string/txt_ChasisNo" />
+
+                                    <android.support.v7.widget.AppCompatTextView
+                                        style="@style/style_TxtHedForm"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="0.05"
+                                        android:text=":" />
+
+                                    <android.support.v7.widget.AppCompatTextView
+                                        android:id="@+id/txt_RCChasisNo"
+                                        style="@style/style_TxtInfoForm"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="0.65" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:weightSum="1">
+
+                                    <android.support.v7.widget.AppCompatTextView
+                                        style="@style/style_TxtHedForm"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="0.30"
+                                        android:text="@string/txt_engNo" />
+
+                                    <android.support.v7.widget.AppCompatTextView
+                                        style="@style/style_TxtHedForm"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="0.05"
+                                        android:text=":" />
+
+                                    <android.support.v7.widget.AppCompatTextView
+                                        android:id="@+id/txt_EngineNo"
+                                        style="@style/style_TxtInfoForm"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="0.65" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+
+                </LinearLayout>
+
+                <!--Vehicle  RCCard Details End-->
+
+                <!--DL Card Start-->
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/txt_DLDtlsFnd"
+                    style="@style/style_TextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/txt_DLDetls"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/lyt_DLCardInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        style="@style/style_CardView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        card_view:cardCornerRadius="15dp"
+                        card_view:elevation="15dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <android.support.v7.widget.AppCompatImageView
+                                    android:layout_width="@dimen/img_RCLogo_Ht"
+                                    android:layout_height="@dimen/img_RCLogo_Ht"
+                                    android:src="@drawable/emblem" />
+
+                                <android.support.v7.widget.AppCompatButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/img_RCLogo_Ht"
+                                    android:layout_marginStart="5dp"
+                                    android:background="@drawable/dllytbg"
+                                    android:text="@string/txt_DLHdng"
+                                    android:textColor="@color/white"
+                                    android:textStyle="bold" />
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:orientation="vertical">
+
+                                <android.support.v7.widget.AppCompatTextView
+                                    android:id="@+id/txt_DLNoHdng"
+                                    style="@style/style_TextView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:textColor="#de0303"
+                                    android:textStyle="bold" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:weightSum="3"
+                                    tools:ignore="DisableBaselineAlignment">
+
+                                    <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="2"
+                                        android:orientation="vertical">
+
+                                        <android.support.v7.widget.AppCompatTextView
+                                            android:id="@+id/txt_DLName"
+                                            style="@style/style_TxtInfoForm"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            tools:ignore="TooDeepLayout" />
+
+                                        <android.support.v7.widget.AppCompatTextView
+                                            android:id="@+id/txt_DLFName"
+                                            style="@style/style_TxtInfoForm"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            tools:ignore="TooDeepLayout" />
+
+                                        <android.support.v7.widget.AppCompatTextView
+                                            android:id="@+id/txt_DLAddress"
+                                            style="@style/style_TxtInfoForm"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:inputType="textMultiLine"
+                                            android:maxLines="4"
+                                            tools:ignore="TooDeepLayout" />
+
+                                        <android.support.v7.widget.AppCompatTextView
+                                            android:id="@+id/txt_DLPntNo"
+                                            style="@style/style_TxtInfoForm"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            tools:ignore="TooDeepLayout" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1">
+
+                                        <android.support.v7.widget.AppCompatImageView
+                                            android:id="@+id/img_DLProfile"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="@dimen/loginLogo_Ht"
+                                            android:src="@drawable/profleimg"
+                                            tools:ignore="TooDeepLayout" />
+                                    </LinearLayout>
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+
+                </LinearLayout>
+
+                <!--DL Card Ends-->
+
+                <!--AADHAAR CARD-->
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/txt_AADRDtlsFnd"
+                    style="@style/style_TextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/txt_AdarDetls"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/lyt_AADHARCardInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        style="@style/style_CardView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        card_view:cardCornerRadius="15dp"
+                        card_view:elevation="15dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <android.support.v7.widget.AppCompatImageView
+                                    android:layout_width="@dimen/img_RCLogo_Ht"
+                                    android:layout_height="@dimen/img_RCLogo_Ht"
+                                    android:src="@drawable/emblem" />
+
+                                <android.support.v7.widget.AppCompatImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/img_RCLogo_Ht"
+                                    android:layout_marginStart="5dp"
+                                    android:background="@drawable/thiranga_edit" />
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:orientation="vertical">
+
+                                <android.support.v7.widget.AppCompatTextView
+                                    android:id="@+id/txt_ADRNoHdng"
+                                    style="@style/style_TextView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:textColor="#e60707" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:weightSum="3"
+                                    tools:ignore="DisableBaselineAlignment">
+
+                                    <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1">
+
+                                        <android.support.v7.widget.AppCompatImageView
+                                            android:id="@+id/img_ADRProfile"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="@dimen/loginLogo_Ht"
+                                            android:src="@drawable/profleimg"
+                                            tools:ignore="TooDeepLayout" />
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="2"
+                                        android:orientation="vertical">
+
+                                        <android.support.v7.widget.AppCompatTextView
+                                            android:id="@+id/txt_ADRName"
+                                            style="@style/style_TxtInfoForm"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            tools:ignore="TooDeepLayout" />
+
+                                        <android.support.v7.widget.AppCompatTextView
+                                            android:id="@+id/txt_ADRFName"
+                                            style="@style/style_TxtInfoForm"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            tools:ignore="TooDeepLayout" />
+
+                                        <android.support.v7.widget.AppCompatTextView
+                                            android:id="@+id/txt_ADRAge"
+                                            style="@style/style_TxtInfoForm"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            tools:ignore="TooDeepLayout" />
+
+                                        <android.support.v7.widget.AppCompatTextView
+                                            android:id="@+id/txt_ADRGender"
+                                            style="@style/style_TxtInfoForm"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            tools:ignore="TooDeepLayout" />
+
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+
+                </LinearLayout>
+                <!--AADHAAR CARD Ends-->
+
+                <!--Driver Info If NO DL/AADHAAR-->
+
+                <LinearLayout
+                    android:id="@+id/lyt_DriverInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/inpt_lytHt"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal"
+                        android:weightSum="3">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            style="@style/style_TextView"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/txt_DRName" />
+
+                        <android.support.v7.widget.AppCompatEditText
+                            android:id="@+id/edt_Txt_DRName"
+                            style="@style/style_EditText"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/inpt_lytHt"
+                            android:layout_weight="2" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/inpt_lytHt"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal"
+                        android:weightSum="3">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            style="@style/style_TextView"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/txt_DRFName" />
+
+                        <android.support.v7.widget.AppCompatEditText
+                            android:id="@+id/edt_Txt_DRFName"
+                            style="@style/style_EditText"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/inpt_lytHt"
+                            android:layout_weight="2" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/inpt_lytAddresHt"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal"
+                        android:weightSum="3">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            style="@style/style_TextView"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/txt_DRAdres" />
+
+                        <android.support.v7.widget.AppCompatEditText
+                            android:id="@+id/edt_Txt_DRADRRESS"
+                            style="@style/style_EditText"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/inpt_lytAddresHt"
+                            android:layout_weight="2"
+                            android:inputType="textCapCharacters|textMultiLine"
+                            android:maxLines="4" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!--Pending Amount/Challans Details-->
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/card_PndngAmntInfo"
+                    style="@style/style_CardView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+                            <android.support.v7.widget.AppCompatTextView
+                                style="@style/style_TxtHedForm"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.6"
+                                android:text="@string/txt_PendngChalnsNo" />
+
+                            <android.support.v7.widget.AppCompatTextView
+                                style="@style/style_TxtHedForm"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.1"
+                                android:text=":" />
+
+                            <android.support.v7.widget.AppCompatTextView
+                                android:id="@+id/txt_PndgChalns"
+                                style="@style/style_TxtHedForm"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.3"
+                                android:text="0" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+                            <android.support.v7.widget.AppCompatTextView
+                                style="@style/style_TxtHedForm"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.6"
+                                android:text="@string/txt_PendgAmnt" />
+
+                            <android.support.v7.widget.AppCompatTextView
+                                style="@style/style_TxtHedForm"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.1"
+                                android:text=":" />
+
+                            <android.support.v7.widget.AppCompatTextView
+                                android:id="@+id/txt_PendingAmnt"
+                                style="@style/style_TxtHedForm"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.3"
+                                android:text="0" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/btn_Spinr_WlrCode"
+                    style="@style/spinner_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/spinner_Ht"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:text="@string/txt_WelerCode" />
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/btn_Spinr_Viltn"
+                    style="@style/spinner_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:text="@string/txt_SlctVltn" />
+
+
+                <!--Selected Violation Details-->
+
+                <LinearLayout
+                    android:id="@+id/lyt_vltnsList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="10dp"
+                    android:orientation="vertical">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        style="@style/style_TextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/txt_Sltd_Vltn"
+                        android:visibility="gone" />
+
+                    <ListView
+                        android:id="@+id/vltn_List"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone" />
+
+
+                </LinearLayout>
+
+                <!--Total Amount/Challans Details-->
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/card_TotlAmountInfo"
+                    style="@style/style_CardView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="2dp"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+                            <android.support.v7.widget.AppCompatTextView
+                                style="@style/style_TxtHedForm"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.6"
+                                android:text="@string/txt_PresntVltnAmnt" />
+
+                            <android.support.v7.widget.AppCompatTextView
+                                style="@style/style_TxtHedForm"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.1"
+                                android:text=":" />
+
+                            <android.support.v7.widget.AppCompatTextView
+                                android:id="@+id/txt_sltdVltnAmnt"
+                                style="@style/style_TxtHedForm"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.3"
+                                android:text="20" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+                            <android.support.v7.widget.AppCompatTextView
+                                style="@style/style_TxtHedForm"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.6"
+                                android:text="@string/txt_TotlAmnt" />
+
+                            <android.support.v7.widget.AppCompatTextView
+                                style="@style/style_TxtHedForm"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.1"
+                                android:text=":" />
+
+                            <android.support.v7.widget.AppCompatTextView
+                                android:id="@+id/txt_TotalFineAmnt"
+                                style="@style/style_TxtHedForm"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.3"
+                                android:text="2000" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.AppCompatTextView
+                    style="@style/style_TextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="@string/detained_items" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <ToggleButton
+                        style="?android:attr/borderlessButtonStyle"
+                        android:id="@+id/t_BtnRC"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/inpt_lytHt"
+                        android:background="@drawable/tbtnrc_bgnd"
+                        android:textOff="@string/rc"
+                        android:textOn="@string/rc"
+                        android:layout_weight="0.5"
+                        android:layout_marginStart="50dp"
+                        android:layout_marginEnd="10dp"
+                        android:textColor="@drawable/switch_color" />
+
+
+                    <ToggleButton
+                        style="?android:attr/borderlessButtonStyle"
+                        android:id="@+id/t_BtnVehicle"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/inpt_lytHt"
+                        android:background="@drawable/tbtnrc_bgnd"
+                        android:textOff="@string/vhcle"
+                        android:textOn="@string/vhcle"
+                        android:layout_weight="0.5"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="50dp"
+                        android:checked="true"
+                        android:textColor="@drawable/switch_color"/>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <ToggleButton
+                        style="?android:attr/borderlessButtonStyle"
+                        android:id="@+id/t_BtnDL"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/inpt_lytHt"
+                        android:background="@drawable/tbtnrc_bgnd"
+                        android:textOff="@string/dl"
+                        android:textOn="@string/dl"
+                        android:layout_weight="0.5"
+                        android:layout_marginStart="50dp"
+                        android:layout_marginEnd="10dp"
+                        android:textColor="@drawable/switch_color"/>
+
+
+                    <ToggleButton
+                        style="?android:attr/borderlessButtonStyle"
+                        android:id="@+id/t_BtnPermit"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/inpt_lytHt"
+                        android:background="@drawable/tbtnrc_bgnd"
+                        android:textOff="@string/permit"
+                        android:textOn="@string/permit"
+                        android:layout_weight="0.5"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="50dp"
+                        android:textColor="@drawable/switch_color"/>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <ToggleButton
+                        style="?android:attr/borderlessButtonStyle"
+                        android:id="@+id/t_BtnNone"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/inpt_lytHt"
+                        android:background="@drawable/tbtnrc_bgnd"
+                        android:textOff="@string/none"
+                        android:textOn="@string/none"
+                        android:layout_weight="0.5"
+                        android:layout_marginStart="50dp"
+                        android:layout_marginEnd="10dp"
+                        android:textColor="@drawable/switch_color"
+                        />
+
+                    <ToggleButton
+                        android:id="@+id/t_BtnPerm"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/inpt_lytHt"
+                        android:background="@drawable/tbtnrc_bgnd"
+                        android:textOff="@string/permit"
+                        android:textOn="@string/permit"
+                        android:layout_weight="0.5"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="50dp"
+                        android:checked="true"
+                        android:visibility="invisible"/>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <android.support.design.widget.TextInputLayout
+                        style="@style/style_InputLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/inpt_lytHt"
+                        android:layout_weight="0.8">
+
+                        <android.support.v7.widget.AppCompatEditText
+                            android:id="@+id/edtTxt_MobileNo"
+                            style="@style/style_EditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/log_et_Ht"
+                            android:hint="@string/mobile_number"
+                            android:inputType="phone"/>
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.v7.widget.AppCompatButton
+                        android:id="@+id/btn_SendOtp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/btn_Ht"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
+                        android:layout_weight="0.2"
+                        android:background="@drawable/button_border_style"
+                        android:text="@string/send_otp"
+                        android:textColor="@color/colorPrimary"
+                        android:textStyle="bold"
+                        android:visibility="gone"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        style="@style/style_TxtHedForm"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:gravity="center"
+                        android:text="@string/txt_DriverImg" />
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/img_DvrCamera"
+                        android:layout_width="@dimen/img_RCLogo_Ht"
+                        android:layout_height="@dimen/img_RCLogo_Ht"
+                        android:layout_weight="0.25"
+                        android:src="@drawable/camera" />
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/img_DvrGallery"
+                        android:layout_width="@dimen/img_RCLogo_Ht"
+                        android:layout_height="@dimen/img_RCLogo_Ht"
+                        android:layout_weight="0.25"
+                        android:src="@drawable/gallery" />
+
+                </LinearLayout>
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/img_SpotCaptured"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/capturedImg_Ht"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="50dp"
+                    android:layout_marginStart="50dp"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:weightSum="1">
+
+                    <android.support.v7.widget.AppCompatButton
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/btn_Ht"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
+                        android:layout_weight="0.5"
+                        android:background="@drawable/btnbg"
+                        android:text="Cancel"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                    <android.support.v7.widget.AppCompatButton
+                        android:id="@+id/btn_CraneSubmit"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/btn_Ht"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
+                        android:layout_weight="0.5"
+                        android:background="@drawable/btnbg"
+                        android:text="Submit"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

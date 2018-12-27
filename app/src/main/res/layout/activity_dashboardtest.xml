@@ -1,0 +1,524 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/lyt_hdr"
+        layout="@layout/header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/header_Ht">
+
+    </include>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lyt_hdr"
+        android:layout_margin="5dp">
+
+
+        <RelativeLayout
+            android:id="@+id/intro_RLyt"
+            android:layout_width="match_parent"
+            android:layout_height="175dp"
+            android:background="@drawable/dbfrst">
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/profile_Logo"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/logo_hyd" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/txt_officerName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/profile_Logo"
+                android:gravity="center"
+                android:text="Srinivas" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/txt_OfficerDesgn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:layout_below="@+id/txt_officerName"
+                android:text="Developer" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/btm_RLyt"
+            android:layout_marginTop="140dp"
+            android:orientation="vertical"
+            android:weightSum="8">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:baselineAligned="false"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <LinearLayout
+                    android:id="@+id/lyt_Spot"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/dbscnd"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="invisible"
+                    tools:ignore="NestedWeights"
+                    android:layout_margin="5dp">
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/img_spot"
+                        android:layout_width="@dimen/m_Icon_size"
+                        android:layout_height="@dimen/m_Icon_size"
+                        android:layout_gravity="center" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/txt_Spot"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/m_spotChallan" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lyt_DD"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:visibility="invisible"
+                    tools:ignore="NestedWeights"
+                    android:layout_margin="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/dbscnd"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <android.support.v7.widget.AppCompatImageView
+                            android:id="@+id/img_DD"
+                            android:layout_width="@dimen/m_Icon_size"
+                            android:layout_height="@dimen/m_Icon_size"
+                            android:layout_gravity="center" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/txt_DD"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/m_DDChallan" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lyt_cpAct"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:visibility="invisible"
+                    tools:ignore="NestedWeights"
+                    android:layout_margin="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="40dp"
+                        android:background="@drawable/dbscnd"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <android.support.v7.widget.AppCompatImageView
+                            android:id="@+id/img_cpAct"
+                            android:layout_width="@dimen/m_Icon_size"
+                            android:layout_height="@dimen/m_Icon_size"
+                            android:layout_gravity="center" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/txt_cpAct"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/m_cpact" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="4"
+                android:layout_marginTop="10dp">
+
+                <RelativeLayout
+                    android:id="@+id/rlyt_ghmc"
+                    android:layout_width="230dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/dbfifth"
+                    android:visibility="invisible"
+                    android:layout_margin="5dp">
+
+                    <LinearLayout
+                        android:id="@+id/lyt_Ghmc"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/dbfifth"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        tools:ignore="NestedWeights">
+
+                        <android.support.v7.widget.AppCompatImageView
+                            android:id="@+id/img_GHMC"
+                            android:layout_width="@dimen/m_Icon_size"
+                            android:layout_height="@dimen/m_Icon_size"
+                            android:layout_gravity="center" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/txt_GHMC"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/m_ghmc" />
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlyt_szre"
+                    android:layout_width="match_parent"
+                    android:layout_height="175dp"
+                    android:layout_toEndOf="@+id/rlyt_ghmc"
+                    android:background="@drawable/dbsix"
+                    android:visibility="invisible"
+                    android:layout_margin="5dp">
+
+                    <LinearLayout
+                        android:id="@+id/lyt_seizure"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/dbsix"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <android.support.v7.widget.AppCompatImageView
+                            android:id="@+id/img_Seizre"
+                            android:layout_width="@dimen/m_Icon_size"
+                            android:layout_height="@dimen/m_Icon_size"
+                            android:layout_gravity="center" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/txt_Seizure"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/m_seizure" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlyt_court"
+                    android:layout_width="match_parent"
+                    android:layout_height="175dp"
+                    android:layout_below="@+id/rlyt_szre"
+                    android:layout_marginStart="160dp"
+                    android:layout_marginTop="5dp"
+                    android:visibility="invisible"
+                    android:layout_margin="5dp">
+
+                    <LinearLayout
+                        android:id="@+id/lyt_Court"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/dbsevn"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:layout_marginStart="50dp"
+                        android:padding="3dp">
+
+                        <android.support.v7.widget.AppCompatImageView
+                            android:id="@+id/img_Court"
+                            android:layout_width="@dimen/m_Icon_size"
+                            android:layout_height="@dimen/m_Icon_size"
+                            android:layout_gravity="center" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/txt_Court"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/m_court" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+            <!--Unused-->
+            <!--<LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:baselineAligned="false"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:visibility="gone"
+                android:weightSum="4">
+
+                <RelativeLayout
+                    android:id="@+id/lyt_Ghmc"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.5"
+                    android:background="@drawable/dbfifth"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="invisible"
+                    tools:ignore="NestedWeights">
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/img_GHMC"
+                        android:layout_width="@dimen/m_Icon_size"
+                        android:layout_height="@dimen/m_Icon_size"
+                        android:layout_gravity="center" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/txt_GHMC"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/m_ghmc" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2.5"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:weightSum="2">
+
+                        <LinearLayout
+                            android:id="@+id/lyt_seizure"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/dbsix"
+                            android:orientation="vertical"
+                            android:visibility="invisible">
+
+                            <android.support.v7.widget.AppCompatImageView
+                                android:id="@+id/img_Seizre"
+                                android:layout_width="@dimen/m_Icon_size"
+                                android:layout_height="@dimen/m_Icon_size"
+                                android:layout_gravity="center" />
+
+                            <android.support.v7.widget.AppCompatTextView
+                                android:id="@+id/txt_Seizure"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/m_seizure" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/lyt_Court"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/dbsevn"
+                            android:orientation="vertical"
+                            android:visibility="invisible">
+
+                            <android.support.v7.widget.AppCompatImageView
+                                android:id="@+id/img_Court"
+                                android:layout_width="@dimen/m_Icon_size"
+                                android:layout_height="@dimen/m_Icon_size"
+                                android:layout_gravity="center" />
+
+                            <android.support.v7.widget.AppCompatTextView
+                                android:id="@+id/txt_Court"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/m_court" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </LinearLayout>-->
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:baselineAligned="false"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+
+
+                <LinearLayout
+                    android:id="@+id/lyt_RelseItms"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="5dp"
+                    android:visibility="invisible"
+                    tools:ignore="NestedWeights">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="40dp"
+                        android:background="@drawable/dbten"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+
+                        <android.support.v7.widget.AppCompatImageView
+                            android:id="@+id/img_relseItms"
+                            android:layout_width="@dimen/m_Icon_size"
+                            android:layout_height="@dimen/m_Icon_size"
+                            android:layout_gravity="center" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/txt_relseItms"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/m_release_doc" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lyt_Reports"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:visibility="invisible"
+                    tools:ignore="NestedWeights"
+                    android:layout_margin="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="20dp"
+                        android:background="@drawable/dbten"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <android.support.v7.widget.AppCompatImageView
+                            android:id="@+id/img_Reports"
+                            android:layout_width="@dimen/m_Icon_size"
+                            android:layout_height="@dimen/m_Icon_size"
+                            android:layout_gravity="center" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/txt_Reports"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/m_reports" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lyt_Settngs"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:visibility="invisible"
+                    tools:ignore="NestedWeights"
+                    android:layout_margin="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/dbten"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <android.support.v7.widget.AppCompatImageView
+                            android:id="@+id/img_Settngs"
+                            android:layout_width="@dimen/m_Icon_size"
+                            android:layout_height="@dimen/m_Icon_size"
+                            android:layout_gravity="center" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/txt_Settngs"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/m_settings" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/btm_RLyt"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/dbbottm">
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
