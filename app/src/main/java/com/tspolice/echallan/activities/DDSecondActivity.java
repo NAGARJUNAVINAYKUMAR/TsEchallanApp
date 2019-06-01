@@ -136,7 +136,7 @@ public class DDSecondActivity extends AppCompatActivity implements
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
 
-        DialogUtils.showProgressDialog(DDSecondActivity.this);
+        //DialogUtils.showProgressDialog(DDSecondActivity.this);
 
         StringRequest otp_Req = new StringRequest(Request.Method.GET, otp_Url, new Response.Listener<String>() {
             @SuppressLint("SetTextI18n")
@@ -177,6 +177,7 @@ public class DDSecondActivity extends AppCompatActivity implements
                                     if (str_OTP.equals(s.toString())) {
                                         alertDialog.dismiss();
                                         countDownTimer.cancel();
+                                        isOTPVerified = true;
                                         Toaster.showSuccessMessage("Otp verified Successfully !");
                                     } else {
                                         edtTxt_OTP.setError("Please enter Valid OTP !");
@@ -277,6 +278,7 @@ public class DDSecondActivity extends AppCompatActivity implements
                     alertDialog.dismiss();
                     countDownTimer.cancel();
                     Toaster.showSuccessMessage("OTP Verified");
+                    isOTPVerified =true;
                 } else {
                     Toaster.showErrorMessage("Invalid OTP");
                 }
@@ -341,17 +343,19 @@ public class DDSecondActivity extends AppCompatActivity implements
                         startActivity(intent_Print);
                     } else {
                         Toaster.longToast("Please check Network!");
+                        Log.d("FinalRes-else-->", "" + "FinalRes-else-->");
                     }
                 } catch (JSONException e) {
                     e.printStackTrace();
                     Toaster.longToast("Please check Network!");
+                    Log.d("JSONException", "" + "JSONException");
                 }
 
             }
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-
+                Log.d("VolleyError-->", "" + error.toString());
             }
         }) {
             @Override

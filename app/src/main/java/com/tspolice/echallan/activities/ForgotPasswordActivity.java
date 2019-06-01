@@ -76,7 +76,7 @@ public class ForgotPasswordActivity extends AppCompatActivity {
 
         progressDialog.setMessage("Loading");
         progressDialog.show();
-        StringRequest stringRequest = new StringRequest(Request.Method.GET, AppConfig.forgotPswd + userId, new Response.Listener<String>() {
+        StringRequest stringRequest = new StringRequest(Request.Method.GET, AppConfig.unitMaster_URL + userId, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
                 progressDialog.dismiss();
